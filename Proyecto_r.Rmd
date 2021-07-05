@@ -18,3 +18,16 @@ los partos.
 En este proyecto, vamos a analizar los datos que demuestran la importancia del lavado de
 manos, identificando anomalías en los procedimientos médicos
 
+
+1. Conociendo los datos
+1.1. Cargue el paquete tidyverse.
+1.2. Lea el archivo deaths_handwashing.csv usando read_csv y asígnelo a la variable yearly.
+1.3. Imprima la variable yearly.
+
+```{r}
+library (tidyverse)
+yearly <- read.csv("deaths_handwashing.csv", header = TRUE, sep = ",", quote = "\"", dec = ".", fill = TRUE, comment.char = "", encoding = "unknown")
+yearly
+
+```
+
