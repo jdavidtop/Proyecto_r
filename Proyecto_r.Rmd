@@ -2,6 +2,13 @@
 title: "R Notebook"
 output: html_notebook
 ---
+Jorge David Top Raxon
+1777389280101
+Maestria en Ingenieria para la Industria con Especializacion en Ciencias de la Computacion 
+Fundamentos de Programacion y Scripting
+
+PROYECTO DE TRIMESTRE
+
 
 Descripción
 La sepsis ocasiona en el mundo más de mil muertes cada día, muchos de estos pacientes
@@ -27,6 +34,25 @@ manos, identificando anomalías en los procedimientos médicos
 ```{r}
 library (tidyverse)
 yearly <- read.csv("deaths_handwashing.csv", header = TRUE, sep = ",", quote = "\"", dec = ".", fill = TRUE, comment.char = "", encoding = "unknown")
+yearly
+
+```
+2. El alarmante número de muertes
+
+La tabla anterior muestra el número de mujeres que dieron a luz durante los años 1841 a
+1846 en una ciudad al noreste de Austria, en dos clínicas en particular. Notará que dar a luz
+era muy peligroso; un número alarmante de mujeres murió como resultado del parto. Vemos
+esto con mayor claridad si observamos la proporción de muertes con respecto al número de
+mujeres que dieron a luz.
+
+2.1. Use mutate para agregar la columna proportion_deaths a yearly, esta nueva columna se
+calculará como la proporción de muertes por número de nacimientos.
+
+2.2. Imprima yearly
+```{r}
+yearly <- yearly %>%
+  mutate(proportion_deaths = deaths/births)
+
 yearly
 
 ```
