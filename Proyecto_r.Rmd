@@ -135,3 +135,21 @@ ggplot(montly, aes (x = date, y = proportion_deaths))+
   geom_point()+
   labs(title = "Date vs Proportion Deaths/Births", subtitle = "Relation by month", x= "Date", y  = "Deaths / Births")
 ```
+
+
+
+6. Los resultados del lavado de manos
+A partir del año 1847 la proporción de muertes se reduce drásticamente y, sí, fue entonces
+cuando se hizo obligatorio el lavado de manos.
+El efecto del lavado de manos se hace aún más claro si lo resaltamos en el gráfico.
+6.1. Agregue una columna TRUE/FALSE a monthly llamado handwashing_started, que será
+TRUE a partir del año en que se impuso el lavado de manos.
+
+```{r}
+montly <- montly %>%
+  mutate (handwashing_started = date  > 1847)
+
+montly
+
+```
+
