@@ -96,3 +96,23 @@ efecto, para esto lea el archivo deaths_clinic_1.csv y asígnelo a la variable m
 montly <- read.csv ("deaths_clinic_1.csv")
 montly
 ```
+
+
+4.2. Agregue la columna proportion_deaths a monthly, esta nueva columna se calculará
+como la proporción de muertes por número de nacimientos.
+```{r}
+
+montly <- montly %>%
+  mutate(proportion_deaths = deaths/births)
+
+montly
+```
+
+4.3. Imprima las primeras filas de monthly usando la función head().
+
+
+```{r}
+head(montly)
+
+```
+
