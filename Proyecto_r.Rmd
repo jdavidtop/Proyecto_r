@@ -56,4 +56,25 @@ yearly <- yearly %>%
 yearly
 
 ```
+3. Muerte en las clínicas
+Si ahora graficamos la proporción de muertes tanto en la clínica 1 como en la clínica 2,
+veremos un patrón curioso.
+3.1. Utilice ggplot para hacer una gráfica lineal de proportion_deaths por año (columna
+year) con una línea por clínica.
+3.2. Las líneas deben tener colores distintos.
+
+
+```{r}
+library (ggplot2)
+by_clinic <- yearly%>%
+  group_by(clinic)
+
+
+by_clinic
+
+  
+ggplot(by_clinic, aes (x=year, y = proportion_deaths, color = clinic))+
+  geom_line()
+
+```
 
