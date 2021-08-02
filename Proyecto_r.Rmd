@@ -116,3 +116,18 @@ head(montly)
 
 ```
 
+5. El efecto del lavado de manos
+Con los datos cargados, ahora podemos ver la proporción de muertes a lo largo del tiempo.
+
+5.1. Haga una gráfica lineal de proportion_deaths por fecha para el data frame monthly
+usando ggplot.
+
+```{r}
+ggplot(montly, aes (x = date, y = proportion_deaths))+
+  geom_point()
+
+```
+
+
+
+dfsaf
