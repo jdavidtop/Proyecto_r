@@ -128,6 +128,10 @@ ggplot(montly, aes (x = date, y = proportion_deaths))+
 
 ```
 
+5.2. Utilice la función labs para dar al eje x y al eje y una estética a las etiquetas.
 
-
-dfsaf
+```{r}
+ggplot(montly, aes (x = date, y = proportion_deaths))+
+  geom_point()+
+  labs(title = "Date vs Proportion Deaths/Births", subtitle = "Relation by month", x= "Date", y  = "Deaths / Births")
+```
