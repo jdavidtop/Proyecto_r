@@ -78,3 +78,21 @@ ggplot(by_clinic, aes (x=year, y = proportion_deaths, color = clinic))+
 
 ```
 
+4. Comienza el lavado de manos
+¿Por qué la proporción de muertes es mucho más alta en la Clínica 1? La única diferencia en
+ambas clínicas era que muchos estudiantes de medicina trabajaban en la Clínica 1, mientras
+que en la Clínica 2 no habían tantos. Otro dato interesante es que los médicos que atendían
+partos solo se encargaban de esa función, mientras que los estudiantes también pasaban
+tiempo en las salas de autopsias examinando cadáveres.
+Se empezó a sospechar que algo en los cadáveres, propagado de las manos de los estudiantes
+de medicina, causaba la enfermedad. Entonces, en un intento desesperado por detener las
+altas tasas de mortalidad, se decretó: ¡Lávese las manos en todo momento!
+
+4.1. Cargue los datos mensuales de la Clínica 1 para ver si el lavado de manos tuvo algún
+efecto, para esto lea el archivo deaths_clinic_1.csv y asígnelo a la variable monthly.
+
+
+```{r}
+montly <- read.csv ("deaths_clinic_1.csv")
+montly
+```
