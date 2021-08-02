@@ -153,3 +153,13 @@ montly
 
 ```
 
+
+6.2. Haga una gráfica lineal de proportion_deaths por fecha para el data frame monthly
+usando ggplot. Haga que el color de la línea dependa de handwashing_started.
+
+```{r}
+
+montly
+ggplot(montly, aes (x = date, y = proportion_deaths, color = handwashing_started, group = 1))+
+  geom_line()
+```
