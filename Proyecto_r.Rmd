@@ -183,10 +183,19 @@ ggplot(montly, aes (x = date, y = proportion_deaths, color = handwashing_started
 ```
 
 
-
+7. ¿Más lavado de manos, menos muertes?
+Nuevamente, las estadísticas demuestran que lavarse las manos tuvo un efecto enorme.
+¿Cuánto redujo la proporción mensual de muertes en promedio?
+7.1. Utilice group_by y summarise para calcular el promedio de proportion_deaths antes y
+después de que se impusiera el lavado de manos.
+7.2. Asigne el resultado en la variable month_summary e imprímala.
+7.3. El data frame resultante debería verse como el siguiente:
 
 
 ```{r}
+montly%>%
+  group_by(handwashing_started)%>%
+  summarize(mont_summary = mean(proportion_deaths))
 
 ```
 
