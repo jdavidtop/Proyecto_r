@@ -123,16 +123,16 @@ Con los datos cargados, ahora podemos ver la proporción de muertes a lo largo d
 usando ggplot.
 
 ```{r}
-ggplot(montly, aes (x = date, y = proportion_deaths))+
-  geom_point()
+ggplot(montly, aes (x = date, y = proportion_deaths, group = 1))+
+  geom_line()
 
 ```
 
 5.2. Utilice la función labs para dar al eje x y al eje y una estética a las etiquetas.
 
 ```{r}
-ggplot(montly, aes (x = date, y = proportion_deaths))+
-  geom_point()+
+ggplot(montly, aes (x = date, y = proportion_deaths, group  = 1))+
+  geom_line()+
   labs(title = "Date vs Proportion Deaths/Births", subtitle = "Relation by month", x= "Date", y  = "Deaths / Births")
 ```
 
@@ -160,6 +160,33 @@ usando ggplot. Haga que el color de la línea dependa de handwashing_started.
 ```{r}
 
 montly
+
 ggplot(montly, aes (x = date, y = proportion_deaths, color = handwashing_started, group = 1))+
   geom_line()
 ```
+
+
+
+6.3. Utilice la función labs para dar al eje x y al eje y una estética a las etiquetas.
+Dado que la columna monthly$date es una fecha, puede compararla con otras fechas
+utilizando los operadores de comparación (<,> =, ==, etc.).
+
+```{r}
+
+montly
+
+ggplot(montly, aes (x = date, y = proportion_deaths, color = handwashing_started, group = 1))+
+  geom_line()+
+  labs(title = "Date vs Proportion Deaths/Births", subtitle = "Relation by month", x= "Date", y  = "Deaths / Births")
+
+
+```
+
+
+
+
+
+```{r}
+
+```
+
